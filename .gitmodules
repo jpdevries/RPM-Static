@@ -1,0 +1,3 @@
+[submodule "ects/jpdevries/frameworks/pandarilla"]
+	path = ects/jpdevries/frameworks/pandarilla
+	url = git@github.com:jpdevries/pandarilla.git
