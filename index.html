@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<title>Demonstrating Responsive Design</title>
+<meta name="description" content="Demonstrating Responsive Design in a manner everyone 'gets'.">
+<meta name="keywords" content="Demonstrations, Responsive Design">
+<meta name="viewport" content="width=1024">
+	<link rel="stylesheet" href="assets/css/main.css">
+  <!--[if IE]>
+  <style type="text/css">
+    .no-touch .tick .header-wrap { margin-top:0 }
+  </style>
+  <!--<![endif]-->
+	<script src="assets/js/vendor/modernizr-2.6.2.min.js" type="text/javascript"></script>
+</head>
+<body>
+<!-- 
+Thanks to Jamus Reynolds for this demonstration
+http://www.jamus.co.uk/demos/rwd-demonstrations/
+-->
+	<div class="header-wrap">
+	<header>
+        <!--h1><a title="MODX" href="http://modx.com">MODX</a></h1-->
+
+        <ul id="screen-options">
+            <li id="iphone" class="active">iPhone</li>
+            <li id="iphone-l" >iPhone landscape</li>
+            <li id="ipad" >iPad</li>
+            <li id="ipad-l" >iPad landscape</li>
+            <li id="desktop" >Desktop</li>
+        </ul>
+
+        <select class="url-select">
+<option value="http://caiphotography.co.uk/" data-desc="&lt;p&gt;&lt;a href=&quot;https://twitter.com/jonleverrier/status/304171013741088768&quot; target=&quot;_blank&quot;&gt;https://twitter.com/jonleverrier/status/304171013741088768&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;#8212;&amp;nbsp;&amp;nbsp;&lt;a href=&quot;http://www.twitter.com/jonleverrrier&quot; target=&quot;_blank&quot;&gt;@jonleverrrier&lt;/a&gt;&lt;/p&gt;">Caipotography</option> 
+<option value="http://charlieclark.ca/" data-desc="&lt;p&gt;&lt;a href=&quot;http://saskatoonparkingday.com&quot; target=&quot;_blank&quot;&gt;http://saskatoonparkingday.com&lt;/a&gt;, &lt;a href=&quot;http://3twenty.ca/&quot; target=&quot;_blank&quot;&gt;http://3twenty.ca/&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;#8212;&amp;nbsp;&amp;nbsp;&lt;a href=&quot;http://www.twitter.com/scottborys&quot; target=&quot;_blank&quot;&gt;@scottborys&lt;/a&gt;&lt;/p&gt;">Charlie Clark</option> 
+<option value="http://www.evo-pt.co.uk/" data-desc="&lt;p&gt;&lt;a href=&quot;http://crimsonpixel.co.uk&quot; target=&quot;_blank&quot;&gt;http://crimsonpixel.co.uk&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;#8212;&amp;nbsp;&amp;nbsp;&lt;a href=&quot;http://www.twitter.com/crimsonpixel&quot; target=&quot;_blank&quot;&gt;@crimsonpixel&lt;/a&gt;&lt;/p&gt;">Evo-PT</option> 
+<option value="http://solihullfestivals.co.uk/" data-desc="&lt;p&gt;&lt;a href=&quot;http://www.w4.co.uk/&quot; target=&quot;_blank&quot;&gt;http://www.w4.co.uk/&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;#8212;&amp;nbsp;&amp;nbsp;&lt;a href=&quot;http://www.twitter.com/andyw4&quot; target=&quot;_blank&quot;&gt;@andyw4&lt;/a&gt;&lt;/p&gt;">Solihull Festival</option> 
+<option value="http://hamiltonbeach.com/" data-desc="&lt;p&gt;&lt;a href=&quot;http://bytejam.com/&quot; target=&quot;_blank&quot;&gt;http://bytejam.com/&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;#8212;&amp;nbsp;&amp;nbsp;&lt;a href=&quot;http://www.twitter.com/bytejam&quot; target=&quot;_blank&quot;&gt;@bytejam&lt;/a&gt;&lt;/p&gt;">Hamilton Beach</option> 
+<option value="http://heartroasters.com/" data-desc="&lt;p&gt;&lt;a href=&quot;http://devries.jp&quot; target=&quot;_blank&quot;&gt;http://devries.jp&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;#8212;&amp;nbsp;&amp;nbsp;&lt;a href=&quot;http://www.twitter.com/jpdevries&quot; target=&quot;_blank&quot;&gt;@jpdevries&lt;/a&gt;&lt;/p&gt;">Heart Roasters</option> 
+<option value="http://topgolf.com/" data-desc="&lt;p&gt;&lt;a href=&quot;http://www.sepiariver.ca&quot; target=&quot;_blank&quot;&gt;http://www.sepiariver.ca&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;#8212;&amp;nbsp;&amp;nbsp;&lt;a href=&quot;http://www.twitter.com/sepiariver&quot; target=&quot;_blank&quot;&gt;@sepiariver&lt;/a&gt;&lt;/p&gt;">TopGolf</option> 
+
+        </select>
+
+  <div class="">
+              <input type="text" name="load" id="getURL" placeholder="Website URL">
+              <input type="submit" value="View" id="button">
+  </div>
+  <i class="icon play-pause pause">&nbsp;</i>
+
+	</header>
+	</div><!-- end header wrapper -->
+
+<div style="position:relative">
+	<div id="viewport" class="iphone">
+		<iframe id="displayframe" name="displayframe" height="480" width="320" src="http://caiphotography.co.uk/"></iframe> 
+
+
+
+	</div>
+
+
+<div class="center-col bottom-strip">
+<div class="desc">
+	<div class="swap">
+	<p><a href="https://twitter.com/jonleverrier/status/304171013741088768" target="_blank">https://twitter.com/jonleverrier/status/304171013741088768</a>&nbsp;&nbsp;&#8212;&nbsp;&nbsp;<a href="http://www.twitter.com/jonleverrrier" target="_blank">@jonleverrrier</a></p>
+	</div>
+	<p>thanks to <a href="http://www.jamus.co.uk/demos/rwd-demonstrations/">jamusreynolds</a></p>
+	<h1><a title="MODX" href="http://modx.com">MODX</a></h1>
+</div>
+	
+
+</div>
+
+</div>
+
+	<div id="device-detail" class="iphone-detail">device detail</div>
+
+	 <script src="assets/js/vendor/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+  var tock = setInterval(function(){
+    $('body').addClass('tick');
+    clearInterval(tock);
+  },3800);
+
+  function slideshow() {
+    return setInterval(function(){
+      var _playing = $('.play-pause').hasClass('pause');
+      if(!$('#screen-options').children('.active').removeClass('active').next().addClass('active').click().length) $('#screen-options').children('li').first().addClass('active').click();
+    },6400);
+  }
+
+  function stopSlideshow() {
+    $('.play-pause').removeClass('pause');
+    clearInterval(tick);
+  }
+
+  var tick = slideshow();
+  $('.play-pause').click(function(e){
+      $(this).toggleClass('pause');
+      (!$(this).hasClass('pause')) ? clearInterval(tick) : tick = slideshow();
+  });
+
+	$('#iphone').click(function() {
+		$("#screen-options li").removeClass("active");
+		$(this).addClass("active");
+		$('#viewport').attr('class', 'iphone');
+		$('#device-detail').attr('class', 'iphone-detail');
+$('#device-detail').removeClass('hidden');
+	});
+
+	$('#iphone-l').click(function() {
+		$("#screen-options li").removeClass("active");
+		$(this).addClass("active");
+		$('#viewport').attr('class', 'iphone-l');
+		$('#device-detail').attr('class', 'iphone-l-detail');
+$('#device-detail').removeClass('hidden');
+	});
+
+	$('#ipad').click(function() {
+		$("#screen-options li").removeClass("active");
+		$(this).addClass("active");
+		$('#viewport').attr('class', 'ipad');
+		$('#device-detail').attr('class', 'ipad-detail');
+$('#device-detail').removeClass('hidden');
+	});
+
+	$('#ipad-l').click(function() {
+		$("#screen-options li").removeClass("active");
+		$(this).addClass("active");
+		$('#viewport').attr('class', 'ipad-l');
+		$('#device-detail').attr('class', 'ipad-l-detail');
+$('#device-detail').removeClass('hidden');
+	});
+
+	$('#desktop').click(function() {
+		$("#screen-options li").removeClass("active");
+		$(this).addClass("active");
+		$('#viewport').attr('class', 'desktop');
+		$('#device-detail').attr('class', 'desktop-detail');
+$('#device-detail').addClass('hidden');
+	});
+
+  $('#screen-options').click(function(e){
+    if(!e.isTrigger)stopSlideshow();
+  });
+
+
+	///get url from form field
+	function updateframe() {
+      var url = $("#getURL").val();
+      $('.swap').empty();
+      
+
+      /// check for http
+      if ($("#getURL").val().match(/^http/)) {
+            $('#displayframe').attr('src', url);
+        }
+        else {
+        	validURL = 'http://' + url;
+        	//alert(validURL);
+        	$('#displayframe').attr('src', validURL);
+        	return false;
+        }
+
+      }
+
+    /// form actions
+    $("#button").click(function() {
+  		updateframe();
+	});
+
+	$('#getURL').keypress(function(e){
+      if(e.which == 13){
+       updateframe();
+       }
+      });
+
+    $(function() {
+    $('input[type=text]').focus(function() {
+      //$(this).val('')
+      });
+
+ });
+
+	$('.url-select').change(function(e){
+     $('#displayframe').attr('src',$(this).val());
+	   $('.swap').html($(this).find('option:selected').data('desc'));
+     $('#getURL').val('');
+	});
+
+
+    //// Check for url in url
+    var givenURL = (RegExp('url=' + '(.+?)(&|$)').exec(location.search)||[,null])[1];
+    if (givenURL == null){
+      ////set-up random url
+      /*base = "http://www.";
+			var urls = ["bbc.co.uk/bbcone","hicksdesign.co.uk","anderssonwise.com","forefathersgroup.com","earthhour.fr","bostonglobe.com"];
+    			var randomURL = urls[Math.floor(Math.random() * urls.length)];
+    			var randomhttpURL = (base + randomURL);
+    			$('#displayframe').attr('src', randomhttpURL);
+          $('#getURL').attr('value', randomURL);*/
+    }else{
+      $('#getURL').attr('value',givenURL );
+      $('#displayframe').attr('src',givenURL);
+    }
+
+
+});
+</script>
+
+
+	
+	<!--script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-243768-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script-->
+</body>
+</html>

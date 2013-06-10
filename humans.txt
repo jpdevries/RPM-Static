@@ -1,0 +1,42 @@
+                            
+/* TEAM */
+
+                            
+CEO: Ryan Thrash
+Developer: JP DeVries
+                            
+Twitter: @MODX
+
+                            
+Location: Dallas, TX
+
+                         
+                 
+                        [...]
+						
+
+							
+/* THANKS */
+
+							
+Name: Jamus Reynolds
+
+						
+                 
+                        [...]
+                        
+
+                            
+/* SITE */
+
+                            
+Last update: 2013/05/10 
+
+                            
+Standards: HTML5, CSS3,..
+
+                            
+Components: Modernizr, jQuery, etc.
+
+                            
+Software: MODX Revolution 2.2.7

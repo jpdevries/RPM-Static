@@ -1,0 +1,506 @@
+    @import "utility";
+    @import "image-set";
+    @import "transition";
+    @import "box-sizing";
+    @import "keyframes";
+    @import "animation";
+
+    $desktopW:1024px;
+    $zoomAmount:0.828421053;
+    $borderColor:#A5A5A5;
+    $ipadBorderRadius:50px;
+    $iphoneSideBorder:20px;
+
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure,
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+     		overflow-y: -moz-scrollbars-vertical;
+     		overflow-y: scroll;
+        	}
+
+		a {
+			color:inherit;
+			@include transition();
+			text-decoration:none;
+			}
+
+		a:hover {
+			color:black;
+
+			
+			}
+
+        body {
+            padding: 0px;
+			margin: 0px;
+			background-color:#d9d9d9;
+			font-family: Arial, sans-serif;
+			font-size:0.75em;
+			color:#404042;
+			min-width:1024px;
+        }
+
+$hoverBarAmnt:6px;
+
+// use of keyframes mixin
+@include keyframes(stripper) {
+  0% {
+		margin-top:0;
+		padding-top:12px;
+  }
+  100% {
+	margin-top:-$hoverBarAmnt - 82;
+	padding-top:0;
+  } 
+}
+
+.header-wrap {
+	height:86px;
+	border-bottom:$hoverBarAmnt solid $borderColor;
+	margin-top:0;
+	padding-top:12px;
+	background:#c8c8c8;
+	@include transition(all,420ms,ease-out);
+}
+
+.no-touch .tick .header-wrap {
+	margin-top:-$hoverBarAmnt - 82;
+	padding-top:0;
+}
+
+.no-touch .header-wrap {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:10000;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   /* IE10-specific styles go here */
+   .header-wrap {
+	margin-top:0 !important;
+	position:inherit !important;
+	padding-top:12px !important;
+	}
+}
+
+
+
+
+
+
+
+
+	.no-touch .tick .header-wrap:hover, .touch .header-wrap {
+		margin-top:0;
+		padding-top:12px;
+		@include transition(all,420ms,ease-in);
+	}
+
+        header {
+        	position:absolute;
+        	bottom:0;
+        	left:0;
+        	@extend .center-col;
+			margin: auto;
+			
+			height:hoverBarAmnt;
+        }
+
+        .center-col {
+        		padding:0 0 20px 0;
+        		width:$desktopW;
+        		margin:0 auto;
+        		position:relative;
+        }
+
+        .bottom-strip {
+        	position:absolute;
+        	bottom:-80px;
+        	left:0;
+        	width:100%;
+        }
+
+        .desc {
+        	text-align:center;
+
+        	text-align:center;
+        	color:#828282; 
+        	width:70%;
+        	margin:0 auto;
+        	p {
+        		margin:0 auto;
+        		padding-top:20px;
+        		padding:0;
+
+        	}
+        }
+
+        
+        h1 {
+			@extend %center-col;
+			position:relative;
+			
+			
+			/*background: url(../images/arrow-right.png) right no-repeat;*/
+			/*padding-right: 28px;*/
+			@include box-sizing();
+        }
+
+
+        h1 a {
+        	@extend %ir;
+        	@include transition(all,420ms,ease-out);
+        	opacity:0.66;
+        	&:hover {
+        		opacity:1;
+        	}
+        	display:block;
+			width:87px;
+			height:33px;
+			position:absolute;
+			right:0;
+			bottom:4px;
+			/*background-image:url('../images/modx_logo.png');*/
+			@include image-set('../images/modx_logo_bw.png','../images/modx_logo_bw@2X.png');
+        } 
+
+		/* menu   */
+		#screen-options {
+			text-align: center;
+			height:76px;
+			width: 566px;
+			background: url(../images/arrow-left.png) right no-repeat;
+			float: left;
+			margin-left:88px;
+
+			margin-right:66px;
+			}
+
+		.svg {
+			#screen-options {
+				background-image: url(../images/arrow-left.svg);
+			}
+		}
+
+		#screen-options li {
+			text-indent:-9999px;
+			display: block;
+			height: 80px;
+			width: 90px;
+			padding: 5px;
+			float: left;
+
+			opacity: 0.4;
+
+			-webkit-transition: all 0.15s ease-in-out 0s;
+			-moz-transition: all 0.15s ease-in-out 0s;
+			-o-transition: all 0.15s ease-in-out 0s;
+			transition: all 0.15s ease-in-out 0s;
+			}
+
+		#screen-options li:hover {
+			opacity: 1;
+			}
+
+		#screen-options li.active {
+			opacity: 1;
+				}
+
+		#iphone,#iphone-l,#ipad,#ipad-l,#desktop {
+			background-image:url(../images/device-sprite.png);
+			cursor:pointer;
+		}
+		.svg {
+			#iphone,#iphone-l,#ipad,#ipad-l,#desktop {
+				background-image:url(../images/device-sprite.svg);
+			}	
+		}
+
+		#iphone {
+			background-repeat: no-repeat;
+			background-position: 0 12px;
+			}
+		#iphone-l {
+			background-repeat: no-repeat;
+			background-position:0 -93px;
+			}
+		#ipad {
+			background-repeat: no-repeat;
+			background-position:0 -197px;
+			}
+		#ipad-l {
+			background-repeat: no-repeat;
+			background-position:0 -306px;
+			}
+		#desktop {
+			background-repeat: no-repeat;
+			background-position:0 -422px;
+			}
+
+		.url-select {
+			float:left;
+			float:none;
+			margin: 11px 0 0 32px;
+			margin:4px 0 10px 0;
+			min-width:166px;
+		}
+
+		div.url-select {
+			margin-top:0;
+		}
+
+		input {
+			display: inline-block;
+			padding: 12px;
+			color: gray;
+			border: 1px solid #CCC;
+			border-radius: 3px;
+			}
+
+		#getURL {
+			width:140px;
+			}
+
+		#button {
+			background-color:#404042;
+			color: #ddd;
+
+			-webkit-transition: all 0.15s ease-in-out 0s;
+			-moz-transition: all 0.15s ease-in-out 0s;
+			-o-transition: all 0.15s ease-in-out 0s;
+			transition: all 0.15s ease-in-out 0s;
+			}
+
+		#button:hover {
+			background-color:black;
+			color:white;
+			}
+
+		#viewport {
+		/* initial width only   */
+			margin: auto ;
+			background-color:#CCCCCC;
+			
+			margin-top: 48px;
+			
+			/* trying different values to fix iOS issues with iFrame busting loose and wrecking the joint.   */
+			overflow:hidden;
+			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
+
+			-webkit-transition: all 0.4s ease-in-out 0s;
+			-moz-transition: all 0.4s ease-in-out 0s;
+			-o-transition: all 0.4s ease-in-out 0s;
+			transition: all 0.4s ease-in-out 0s;
+			@media only screen and (max-height:1224px) {
+				margin-top:30px;
+			}
+		}
+
+		iframe {
+			background-color: white;
+			position:absolute;
+			margin:auto;
+			border:none;
+			
+			}
+
+
+		/* ////// DEVICES */
+
+		/* /// Details   */
+		#device-detail {
+			position: relative;
+			z-index: 1000;
+			text-indent:-9999px;
+			display: block;
+			margin: auto;
+
+			-webkit-transition: all 0.15s ease-in-out 0s;
+			-moz-transition: all 0.15s ease-in-out 0s;
+			-o-transition: all 0.15s ease-in-out 0s;
+			transition: all 0.15s ease-in-out 0s;
+
+			&.hidden {
+				opacity:0;
+				display:none;
+			}
+			}
+
+		.iphone-detail {
+			top: -53px;
+			width: 40px;
+			height: 40px;
+			border-radius: 20px;
+			background-color:#CCCCCC;
+
+			}
+
+		.iphone-l-detail {
+			top: -210px;
+			left: -270px;
+			width: 40px;
+			height: 40px;
+			border-radius: 20px;
+			background-color:#CCCCCC;
+			}
+
+		.ipad-detail {
+			top: -70px;
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			background-color:#CCCCCC;
+			}
+
+		.ipad-l-detail {
+
+			top: -512px;
+			left: 563px;
+			width: 50px;
+			height: 50px;
+			border-radius: $ipadBorderRadius;
+			background-color:#CCCCCC;
+			}
+
+		.ipad-detail, .ipad-l-detail, .ipad-l, .ipad {
+			@media only screen and (max-width:1224px), screen and (max-height:1024px) {
+		 		zoom:$zoomAmount;
+		  		-webkit-scale:$zoomAmount;	
+			}
+		}
+
+	
+		@media only screen and (max-width:1224px), screen and (max-height:1024px) {
+			.ipad {
+				border-top-width:105px !important;
+				border-bottom-width:105px !important;
+				border-left-width: 30px !important;
+				border-right-width: 30px !important;
+			}
+			.ipad-l {
+				border-top-width: 30px !important;
+				border-bottom-width: 30px !important;
+				border-left-width:105px !important;
+				border-right-width:105px !important;
+			}
+			.ipad-l-detail {
+				top:-440px;
+			}
+			.iphone-l-detail {
+				top:-203px;
+			}
+			.ipad-detail {
+				top:-76px;
+			}
+		}
+		
+
+
+		.desktop-detail {
+			border-radius: 25px;
+			background:none;
+			border-bottom: 100px solid #404042;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			height: 0;
+			width: 100px;
+			top: 20px;
+			}
+
+		/* /// Devices sizes   */
+		#viewport {
+			@include transition();
+		}
+		/* iphone 320 x 480 */
+		#viewport.iphone {
+			border-top: 65px solid;
+			border-right: $iphoneSideBorder solid;
+			border-bottom: 65px solid;
+			border-left: $iphoneSideBorder solid;
+			border-radius: 20px;
+			}
+		.iphone, .iphone iframe {
+			width:320px;
+			height:480px;
+			}
+		.iphone-l {
+			border-top: $iphoneSideBorder solid;
+			border-right: 65px solid;
+			border-bottom: $iphoneSideBorder solid;
+			border-left: 65px solid;
+			border-radius: 20px;
+			}
+		.iphone-l, .iphone-l iframe { 
+			width:480px;
+			height:320px;
+			}
+
+		/* ipad 1024 x 768 */
+		.ipad {
+			border: 90px solid;
+			border-radius: $ipadBorderRadius;
+			}
+		.ipad, .ipad iframe {
+			width:768px;
+			height:1024px;
+			}
+		.ipad-l {
+			border: 90px solid;
+			border-radius: $ipadBorderRadius;
+			}
+		.ipad-l, .ipad-l iframe {
+			width:1024px;
+			height:768px;
+			}
+
+		/* desktop 1200 x 800 */
+		#viewport.desktop {
+			border: 20px solid;
+			border:1px solid #A5A5A5;
+			margin-top:0;
+			}
+		.desktop, .desktop iframe {
+			width:100%;
+			height:800px;
+			@media only screen and (min-width:1920px), screen and (min-height:1080px) {
+				height:1080px;
+			}
+		}
+
+header {
+	position:relative;
+	.play-pause {
+		width:14px;
+		height:14px;
+		display:block;
+		background:url('../images/device-sprite.png') no-repeat right top;
+		position:absolute;
+		bottom:24px;
+		right:405px;
+		cursor:pointer;
+		opacity:0.4;
+		@include transition(opacity);
+		&:hover {
+			opacity:1;
+		}
+		&.pause {
+			background-position:right bottom;
+		}
+	}
+}
+
+
+.svg header .icon {
+	background-image:url('../images/device-sprite.svg');
+}
